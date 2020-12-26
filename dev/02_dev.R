@@ -16,6 +16,13 @@
 ## Dependencies ----
 ## Add one line by package you want to add as dependency
 usethis::use_package( "seminr" )
+usethis::use_package( "shinydashboard" )
+usethis::use_package( "DiagrammeR" )
+usethis::use_package( "dplyr" )
+usethis::use_package( "shinyjs" )
+usethis::use_package( "shinyBS" )
+
+
 
 ## Add modules ----
 ## Create a module infrastructure in R/
