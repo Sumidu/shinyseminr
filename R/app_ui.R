@@ -28,12 +28,10 @@ app_ui <- function(request) {
                       # First tab content
                         shinydashboard::tabItem(tabName = "constructs",
                               fluidRow(
-                                shinydashboard::box(width = 9, DiagrammeR::grVizOutput("construct_plot", height = 500)),
-                                shiny::uiOutput("ui_item_select"),
-                                shiny::uiOutput("ui_constructs"),
-                                mod_constructselect_ui("constructselect_ui_1"),
-                                shinydashboard::box(width = 9,
-                                    shiny::verbatimTextOutput("construct_code"))
+                                mod_multi_column_select_ui("multi_column_select_ui_1"),
+                                shinydashboard::box(width = 6, DiagrammeR::grVizOutput("construct_plot", height = 500)),
+                                #mod_constructselect_ui("constructselect_ui_1"),
+                                shinydashboard::box(width = 6, shiny::verbatimTextOutput("construct_code", placeholder = TRUE))
                               )),
 
                       # Second tab content
